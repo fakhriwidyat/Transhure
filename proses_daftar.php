@@ -4,23 +4,23 @@ require 'koneksi.php';
 
 // Pastikan tombol daftar sudah ditekan dari form
 if (isset($_POST['daftar'])) {
-    // Tangkap data yang diisi user
+    // Tangkap data yang diisi user. Ubah username menjadi gmail sesuai dengan input HTML
     $nama = mysqli_real_escape_string($koneksi, $_POST['nama']);
-    $username = mysqli_real_escape_string($koneksi, $_POST['username']);
+    $gmail_user = mysqli_real_escape_string($koneksi, $_POST['gmail']); 
     $password = $_POST['password'];
 
     // Enkripsi password biar aman (berubah jadi kode acak)
     $password_hashed = password_hash($password, PASSWORD_DEFAULT);
 
-    // Cek apakah username sudah ada di database
-    $cek = mysqli_query($koneksi, "SELECT * FROM users WHERE username='$username'");
+    // Cek apakah gmail sudah ada di database. (Pastikan nama kolom di tabelmu adalah 'gmail')
+    $cek = mysqli_query($koneksi, "SELECT * FROM users WHERE gmail='$gmail_user'");
     
     if (mysqli_num_rows($cek) > 0) {
-        // Jika username sudah dipakai orang lain
-        echo "<script>alert('Username sudah dipakai! Pilih yang lain.'); window.location='sign_up.html';</script>";
+        // Jika gmail sudah dipakai orang lain
+        echo "<script>alert('Gmail sudah terdaftar! Gunakan gmail lain.'); window.location='sign_up.html';</script>";
     } else {
-        // Jika username tersedia, simpan ke database
-        $query = "INSERT INTO users (nama, username, password) VALUES ('$nama', '$username', '$password_hashed')";
+        // Jika gmail tersedia, simpan ke database. (Pastikan nama kolom di tabelmu adalah 'nama', 'gmail', 'password')
+        $query = "INSERT INTO users (nama, gmail, password) VALUES ('$nama', '$gmail_user', '$password_hashed')";
         
         if (mysqli_query($koneksi, $query)) {
             // Jika berhasil disimpan, muncul pop-up dan arahkan ke halaman login
