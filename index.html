@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trashure - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <div class="brand-section">
+        <img src="logo.png" alt="Trashure Logo" class="logo">
+    </div>
+
+    <div class="login-wrapper">
+        <div class="login-card">
+            <h2>Selamat datang, user!</h2>
+            
+            <form id="loginForm" action="login.php" method="POST">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit" name="login" style="width: 100%; padding: 12px; border-radius: 12px; background-color: #224B3C; color: white; border: none; font-size: 16px; font-weight: 600; cursor: pointer; margin-bottom: 15px; transition: 0.3s;">Masuk</button>
+
+                <div class="links-row">
+                    <a href="sign_up.html" class="action-link">Belum punya akun? daftar dulu!</a>
+                    <a href="#" class="action-link">Lupa password</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

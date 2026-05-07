@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+/* Container Utama */
+.background-container {
+    /* GANTI URL DI BAWAH DENGAN GAMBAR BACKGROUND KOTA FUTURISTIK KAMU */
+    background-image: url('bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 15%; 
+}
+
+/* Kotak Form (Glassmorphism Effect) */
+.signup-card {
+    background: rgba(34, 75, 60, 0.7); 
+    backdrop-filter: blur(2px); 
+    -webkit-backdrop-filter: blur(2px);
+    padding: 40px 50px;
+    border-radius: 25px;
+    width: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Judul Daftar di Tengah */
+.signup-card h2 {
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 35px;
+    font-weight: 700;
+    text-align: center; 
+}
+
+/* Input Form */
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 30px; 
+    background-color: #d9d9d9;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Password + Icon Mata */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper i {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    color: #1a423a;
+    font-size: 18px;
+}
+
+/* Tombol "Daftar Sekarang" */
+.btn-daftar {
+    width: 100%;
+    padding: 15px;
+    background-color: #1a423a; 
+    color: #ffffff;
+    border: none;
+    border-radius: 30px; 
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-daftar:hover {
+    background-color: #245e52; 
+}
+
+.btn-daftar:active {
+    transform: scale(0.98); 
+}
+
+/* Link (Udah punya akun & Help) */
+.form-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.form-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.form-links a:hover {
+    text-decoration: underline;
+}
+
+/* Bagian Daftar Social Media */
+.social-signup {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-signup p {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+.social-icon:hover {
+    transform: scale(1.1); 
+}
+
+/* Styling Logo TRASHURE (Sisi Kanan) */
+.main-logo {
+     position: absolute;
+    top: -10px;
+    right: 100px;
+    max-width: 400px;
+    z-index: 1;
+}
