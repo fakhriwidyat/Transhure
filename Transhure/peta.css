@@ -1,0 +1,301 @@
+/* =========================================
+   RESET & PENGATURAN DASAR
+   ========================================= */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+body { 
+    background-color: #d9e8e3; 
+    background-image: url('dsbackgroun.jpeg'); 
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden; 
+}
+
+/* =========================================
+   NAVBAR (DISAMAKAN DENGAN DASHBOARD)
+   ========================================= */
+body .navbar { 
+    background-color: #3d7a6a; 
+    padding: 10px 50px; 
+    color: white; 
+    width: 90%;         
+    margin: 20px auto;
+    border-radius: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+
+.nav-links { 
+    display: flex; 
+    list-style: none; 
+    gap: 100px;         
+}
+
+.nav-links a { color: white; text-decoration: none; font-weight: bold; font-size: 15px; }
+/* Hilangkan garis bawah untuk kondisi normal dan menu yang sedang aktif */
+.nav-links a,
+.nav-links a.active {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links a:hover { 
+    text-decoration: underline; 
+    color: white; 
+    text-decoration-thickness: 1.8px;
+}
+.nav-right { display: flex; align-items: center; gap: 15px; }
+
+/* Tambahan class btn-login agar konsisten di halaman peta */
+.nav-right .btn-login {
+    background-color: #ffffff;
+    color: #3d7a6a;
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+.nav-right .btn-login:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   KUSTOM TOMBOL VERSI LOGIN (USER PROFILE & LOGOUT PETA) - TANPA !IMPORTANT
+   ========================================================================== */
+
+/* Mengunci spesifik ke dalam profile-wrapper agar dropdown di peta tidak berantakan */
+.nav-right .profile-wrapper .user-profile {
+    background-color: #ffffff;
+    color: #3d7a6a;
+    padding: 8px 20px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.nav-right .profile-wrapper .user-profile:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+/* Tombol Logout Putih Lonjong di Peta */
+.nav-right .btn-logout {
+    background-color: #ffffff;
+    color: #3d7a6a;
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-right .btn-logout:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    color: #3d7a6a;
+}
+
+.nav-right .btn-logout i {
+    color: #3d7a6a;
+}
+
+
+/* =========================================
+   BAGIAN PETA UTAMA
+   ========================================= */
+.map-section {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map-glow-container {
+    width: 100%;
+    height: 450px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid #8be4d8;
+    box-shadow: 0 0 25px rgba(139, 228, 216, 0.8);
+    background-color: white;
+}
+
+/* =========================================
+   STYLE TOMBOL SIMULASI LOKASI
+   ========================================= */
+.simulation-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 25px auto 10px auto;
+    text-align: center;
+}
+.simulation-container h3 {
+    color: #1e4d40;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.location-buttons-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.btn-location-select {
+    padding: 10px 16px;
+    background-color: #3d7a6a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.btn-location-select:hover {
+    background-color: #1e4d40;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   PANEL DETAIL LOKASI tunggal
+   ========================================= */
+.panels-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px;
+}
+
+.detail-panel-only {
+    width: 100%;
+    max-width: 650px; 
+    background-color: #a4dacb; 
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.panel-header {
+    background-color: white;
+    color: #000;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 14px;
+    text-align: center;
+    border-bottom: 2px solid #a4dacb;
+    letter-spacing: 1px;
+}
+
+.panel-body {
+    padding: 25px;
+    color: #1e4d40;
+}
+
+.detail-body h4 { font-size: 18px; margin-bottom: 6px; font-weight: bold; color: #1e4d40; }
+.detail-body .address { font-size: 13px; margin-bottom: 18px; line-height: 1.5; color: #333; }
+.detail-body h5 { font-size: 14px; margin-bottom: 8px; font-weight: bold; color: #1e4d40; }
+
+.trash-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+.trash-list li {
+    margin-bottom: 6px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer { 
+    background: #D9D9D9; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start;
+    margin-top: 50px; 
+    width: 100%; 
+    flex-wrap: wrap; 
+}
+
+.footer-logo img {
+    height: 300px; 
+    margin-bottom: 10px;
+    margin-left: 65px;
+}
+
+.footer-links { 
+    display: flex; 
+    gap: 190px; 
+    margin-top: 120px;
+    margin-right: 100px;
+}
+
+.footer-links h5 { 
+    color: #1e4d40; 
+    font-size: 27px; 
+    font-weight: 700;
+    margin-bottom: 20px; 
+}
+
+.footer-links p {
+    color: #555;
+    font-size: 20px; 
+    margin-bottom: 12px; 
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-links p:hover {
+    color: #3d7a6a;
+    text-decoration: underline;
+}
+
+/* =========================================
+   PERBAIKAN FOOTER BAWAH (COPYRIGHT)
+   ========================================= */
+.footer-bottom {
+    border-top: none;
+    background-color: #3d7a6a; 
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-bottom p {
+    color: #ffffff; 
+    margin: 0;
+}

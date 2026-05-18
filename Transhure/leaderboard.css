@@ -1,0 +1,442 @@
+/* ===================================================
+   1. GLOBAL STYLES & STRUCTURAL LAYOUT
+   =================================================== */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
+
+body {
+    background-image: url('dsbackgroun.jpeg'); 
+    background-size: cover;
+    background-position: center top; 
+    background-repeat: no-repeat;
+    background-attachment: scroll; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.leaderboard-wrapper {
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* ===================================================
+   2. NAVBAR
+   =================================================== */
+body .navbar { 
+    background-color: #3d7a6a; 
+    padding: 10px 50px; 
+    color: white; 
+    width: 90%;         
+    margin: 20px auto;
+    border-radius: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+}
+
+.nav-links { 
+    display: flex; 
+    list-style: none; 
+    gap: 100px; 
+}
+
+.nav-links a { 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 16px; 
+    letter-spacing: 0.5px; 
+    transition: 0.3s;
+}
+
+.nav-links a,
+.nav-links a.active {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links a:hover { 
+    text-decoration: underline; 
+    color: white; 
+}
+
+.nav-right { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+}
+
+/* ==========================================================================
+   KUSTOM TOMBOL NAVIGASI KANAN & DROPDOWN (SAMA PERSIS DASHBOARD)
+   ========================================================================== */
+
+.nav-right .profile-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-right .profile-wrapper .user-profile:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.nav-right .profile-wrapper .user-profile {
+    background-color: #ffffff;
+    color: #3d7a6a;
+    padding: 8px 20px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.nav-right .btn-logout {
+    background-color: #ffffff;
+    color: #3d7a6a;
+    padding: 8px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-right .btn-logout:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.nav-right .btn-logout i {
+    color: #3d7a6a;
+}
+
+.nav-right .btn-login {
+    background-color: #ffffff; 
+    color: #3d7a6a;            
+    padding: 8px 20px;
+    border-radius: 25px;       
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    font-size: 15px;
+}
+
+.nav-right .btn-login:hover {
+    background-color: #f0f0f0; 
+    transform: translateY(-2px);
+}
+
+.nav-right .profile-wrapper .dropdown-content {
+    visibility: hidden; 
+    opacity: 0;
+    transform: translateY(-15px); 
+    transition: all 0.3s ease-in-out; 
+    position: absolute;
+    top: 55px; 
+    right: 0;
+    background-color: #ffffff;
+    min-width: 240px;
+    box-shadow: 0px 8px 24px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    z-index: 1000;
+    overflow: hidden; 
+}
+
+.nav-right .profile-wrapper .dropdown-content.show {
+    visibility: visible; 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+.nav-right .profile-wrapper .dropdown-header {
+    background-color: #f2f7f6; 
+    padding: 25px 20px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e5eaea; 
+}
+
+.nav-right .profile-wrapper .dropdown-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #3d7a6a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 12px auto;
+}
+
+.nav-right .profile-wrapper .dropdown-avatar i {
+    color: #ffffff;
+    font-size: 28px;
+}
+
+.nav-right .profile-wrapper .dropdown-content a.menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+.nav-right .profile-wrapper .dropdown-content a.menu-link:hover {
+    background-color: #f5f5f5;
+    color: #15A38F;
+}
+
+/* ===================================================
+   3. PANEL KONTEN LEADERBOARD (TENGAH)
+   =================================================== */
+.header-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ===================================================
+   DROPDOWN SORTING (TERATAS / TERBAWAH)
+   =================================================== */
+.status-badge-select {
+    background-color: #0A534A;
+    color: white;
+    font-weight: bold;
+    padding: 10px 40px 10px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    border: 2px solid #3be3cc;
+    cursor: pointer;
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 24px;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+.status-badge-select:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(59, 227, 204, 0.5);
+}
+
+.status-badge-select:hover {
+    background-color: #0e6b5f;
+}
+
+.status-badge-select option {
+    background-color: #0A534A;
+    color: white;
+}
+
+.header-desc {
+    font-size: 16px;
+    color: #0A534A;
+    font-weight: bold;
+}
+
+.header-right-update {
+    background-color: #15A38F;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* ===================================================
+   DATE PICKER (PILIH TANGGAL)
+   =================================================== */
+.date-input {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    margin-top: 2px;
+    padding: 0;
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.date-input:hover {
+    opacity: 0.8;
+}
+
+.update-title {
+    font-size: 10px;
+    text-transform: uppercase;
+    display: block;
+    opacity: 0.8;
+}
+
+.table-container {
+    background-color: rgba(14, 90, 81, 0.92);
+    border: 3px solid #3be3cc;
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 0 0 25px rgba(59, 227, 204, 0.4);
+}
+
+.main-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    font-size: 16px;
+}
+
+.main-table th {
+    background-color: rgba(10, 68, 61, 0.8);
+    padding: 16px;
+    color: #3be3cc;
+    border-bottom: 3px solid #3be3cc;
+}
+
+.main-table td {
+    padding: 14px 16px;
+    text-align: center;
+    border-bottom: 1px solid rgba(59, 227, 204, 0.2);
+}
+
+.rank-number { font-weight: bold; font-size: 18px; }
+
+.avatar-circle {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-action-profile {
+    background-color: #15A38F;
+    color: white;
+    text-decoration: none;
+    padding: 6px 18px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* ===================================================
+   4. FOOTER & COPYRIGHT
+   =================================================== */
+footer { 
+    background: #D9D9D9; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start;
+    margin-top: 50px; 
+    width: 100%; 
+    flex-wrap: wrap; 
+    box-sizing: border-box;
+}
+
+.footer-logo img {
+    height: 300px; 
+    margin-bottom: 10px;
+    margin-left: 65px;
+}
+
+.footer-links { 
+    display: flex; 
+    gap: 190px; 
+    margin-top: 120px;
+    margin-right: 100px;
+}
+
+.footer-links h5 { 
+    color: #1e4d40; 
+    font-size: 27px; 
+    font-weight: 700;
+    margin-bottom: 20px; 
+    margin-top: 0;
+}
+
+.footer-links p {
+    color: #555;
+    font-size: 20px; 
+    margin-bottom: 12px; 
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 0;
+}
+
+.footer-links p:hover {
+    color: #3d7a6a;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: none;
+    background-color: #3d7a6a; 
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-bottom p {
+    color: #ffffff; 
+    margin: 0;
+}

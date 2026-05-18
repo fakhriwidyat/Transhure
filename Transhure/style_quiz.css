@@ -1,0 +1,109 @@
+/* --- PENGATURAN UMUM --- */
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background-color: #d9e8e3; 
+    padding: 50px; 
+    margin: 0;
+}
+
+h2 { color: #1e4d40; }
+p { color: #555; }
+
+/* --- HALAMAN MULAI QUIZ --- */
+.quiz-container { 
+    background: white; 
+    padding: 40px; 
+    border-radius: 20px; 
+    max-width: 500px; 
+    margin: 0 auto; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    text-align: center;
+}
+.btn-mulai { 
+    background-color: #3d7a6a; 
+    color: white; 
+    padding: 15px 30px; 
+    text-decoration: none; 
+    border-radius: 25px; 
+    font-weight: bold; 
+    display: inline-block; 
+    margin-top: 20px; 
+    transition: 0.3s; 
+}
+.btn-mulai:hover { background-color: #1e4d40; }
+
+/* --- HALAMAN MENGERJAKAN QUIZ --- */
+.quiz-box { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 15px; 
+    width: 100%; 
+    max-width: 600px; 
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+}
+.opsi-btn { 
+    display: block; 
+    width: 100%; 
+    background: #ecf3f1; 
+    border: 2px solid #ecf3f1; 
+    padding: 15px; 
+    margin: 10px 0; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    text-align: left; 
+    font-size: 16px; 
+    transition: 0.3s; 
+}
+.opsi-btn:hover { background: #d9e8e3; border-color: #3d7a6a; }
+.opsi-btn.selected { background: #3d7a6a; color: white; border-color: #3d7a6a; }
+.nav-btn { 
+    background: #15A38F; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    float: right; 
+    margin-top: 20px; 
+    font-weight: bold; 
+}
+.nomor-soal { color: #15A38F; font-weight: bold; margin-bottom: 15px; display: block; }
+
+/* --- HALAMAN HASIL QUIZ --- */
+.result-card { 
+    background: white; 
+    padding: 40px; 
+    border-radius: 20px; 
+    max-width: 400px; 
+    margin: 0 auto; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    text-align: center;
+}
+.score { font-size: 50px; color: #15A38F; font-weight: bold; margin: 20px 0; }
+.stats { display: flex; justify-content: space-around; margin-bottom: 20px; font-weight: bold; }
+.benar { color: #3d7a6a; }
+.salah { color: #e74c3c; }
+.rank-box { background: #fef0cd; padding: 10px; border-radius: 10px; color: #d35400; font-weight: bold; margin-bottom: 20px;}
+.btn-link { background: #3d7a6a; color: white; padding: 10px 20px; text-decoration: none; border-radius: 20px; font-weight: bold; display: block; margin-top: 10px;}
+
+/* --- HALAMAN LEADERBOARD --- */
+.board-container { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 20px; 
+    max-width: 700px; 
+    margin: 0 auto; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+}
+.board-container h2 { text-align: center; }
+.filter-box { text-align: center; margin-bottom: 20px; }
+.filter-box input, .filter-box button { padding: 8px; border-radius: 5px; border: 1px solid #ccc; }
+.filter-box button { background: #15A38F; color: white; border: none; cursor: pointer; font-weight: bold; }
+table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+th { background-color: #3d7a6a; color: white; }
+tr:nth-child(even) { background-color: #f9f9f9; }
+.peringkat-1 { background-color: #ffd700; color: #000; font-weight: bold; border-radius: 50%; padding: 5px 12px; }
+.peringkat-2 { background-color: #c0c0c0; color: #000; font-weight: bold; border-radius: 50%; padding: 5px 12px;}
+.peringkat-3 { background-color: #cd7f32; color: #fff; font-weight: bold; border-radius: 50%; padding: 5px 12px;}

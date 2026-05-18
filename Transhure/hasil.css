@@ -1,0 +1,115 @@
+/* ===================================================
+   1. BACKGROUND HALAMAN HASIL (Selayar Penuh)
+   =================================================== */
+body {
+    /* Menggunakan gambar background yang sama */
+    background-image: url('homeds.jpeg'); /* <-- PASTIKAN NAMA FILE GAMBAR KAMU SUDAH BENAR */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ===================================================
+   2. KOTAK KARTU HASIL (Result Card)
+   =================================================== */
+.result-card {
+    background-color: rgba(255, 255, 255, 0.95); /* Sedikit transparan mewah */
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.result-card h2 {
+    color: #15A38F;
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.score {
+    font-size: 36px;
+    font-weight: bold;
+    color: #15A38F;
+    margin-bottom: 20px;
+}
+
+/* Penataan info Benar / Salah */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.stats .benar {
+    color: #2d7a6e;
+}
+
+.stats .salah {
+    color: #e74c3c;
+}
+
+/* ===================================================
+   3. KOTAK RANK / MEDALI
+   =================================================== */
+.rank-box {
+    background-color: #fff4d4; /* Warna krem background rank */
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 25px;
+    font-size: 15px;
+    color: #7a5400;
+    font-weight: bold;
+}
+
+.rank-title {
+    font-size: 24px;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.medali-img {
+    width: 45px; /* Ukuran gambar medali pengganti emoji */
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* ===================================================
+   4. TOMBOL NAVIGASI
+   =================================================== */
+.btn-link {
+    display: block;
+    width: 100%;
+    background-color: #2D7A6E;
+    color: white;
+    text-decoration: none;
+    padding: 14px 0;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 12px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(45, 122, 110, 0.2);
+}
+
+.btn-link:hover {
+    background-color: #1F544D;
+    transform: translateY(-1px);
+}

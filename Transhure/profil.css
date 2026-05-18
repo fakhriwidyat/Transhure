@@ -1,0 +1,130 @@
+/* =========================================
+   PENGATURAN DASAR HALAMAN PROFIL
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* Background disamakan dengan dashboard */
+    background-image: url('dsbackgroun.jpeg'); 
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Menyamakan tombol User Profile dengan Logout (Putih Lonjong) */
+.nav-right .user-profile {
+    background-color: #ffffff; /* Mengubah dari transparan ke putih bersih */
+    color: #3d7a6a;            /* Teks menjadi hijau */
+    padding: 8px 20px;
+    border-radius: 25px;       /* Lonjong capsule */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Efek saat profil di-hover */
+.nav-right .user-profile:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+/* Memastikan warna icon user di dalamnya juga hijau */
+.nav-right .user-profile i {
+    color: #3d7a6a;
+    font-size: 18px;
+}
+
+/* =========================================
+   DESAIN KOTAK PROFIL
+   ========================================= */
+.profile-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border-top: 8px solid #3d7a6a; /* Warna hijau khas Trashure */
+}
+
+.profile-icon {
+    font-size: 80px;
+    color: #3d7a6a;
+    margin-bottom: 15px;
+}
+
+.profile-name {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.profile-info {
+    background-color: #ecf3f1;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.info-item span.label {
+    font-weight: bold;
+    color: #1e4d40;
+}
+
+/* =========================================
+   TOMBOL KEMBALI
+   ========================================= */
+.btn-back {
+    display: inline-block;
+    background-color: #3d7a6a;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-back:hover {
+    background-color: #224B3C;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(34, 75, 60, 0.4);
+}
+
+.btn-back i {
+    margin-right: 8px;
+}

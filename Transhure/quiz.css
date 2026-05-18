@@ -1,0 +1,156 @@
+/* ===================================================
+   1. PENGATURAN BACKGROUND Halaman (Selayar Penuh)
+   =================================================== */
+body {
+    /* Menggunakan gambar background kuis kamu */
+    background-image: url('dsbackgroun.jpeg'); /* <-- PASTIKAN NAMA FILE GAMBAR KAMU SUDAH BENAR */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    /* Pengaturan agar posisi kotak kuis tepat berada di tengah-tengah layar */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ===================================================
+   2. KOTAK PUTIH KUIS (Quiz Container)
+   =================================================== */
+.quiz-container {
+    background-color: rgba(255, 255, 255, 0.95); /* Putih bersih transparan sedikit agar estetik */
+    padding: 40px 30px;
+    border-radius: 20px; /* Membuat sudut kotak melengkung halus */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Efek bayangan tegas di balik kotak */
+    max-width: 550px;
+    width: 90%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Pengaturan teks judul */
+.quiz-container h2 {
+    color: #15A38F; /* Warna hijau khas Trashure */
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+/* Pengaturan teks deskripsi poin */
+.quiz-container p {
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* ===================================================
+   3. TOMBOL "MULAI KERJAKAN" (Hijau Bulat)
+   =================================================== */
+.btn-mulai {
+    display: inline-block;
+    background-color: #2D7A6E; /* Warna hijau tombol */
+    color: white;
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    padding: 14px 45px;
+    border-radius: 30px; /* Membuat tombol lonjong bulat sempurna */
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(45, 122, 110, 0.3);
+}
+
+/* Efek interaktif saat tombol disentuh mouse */
+.btn-mulai:hover {
+    background-color: #1F544D; /* Hijau berubah sedikit lebih gelap */
+    transform: translateY(-2px); /* Tombol sedikit mengangkat ke atas */
+    box-shadow: 0 6px 18px rgba(45, 122, 110, 0.4);
+}
+
+/* ===================================================
+   4. MODAL POP-UP KONFIRMASI MENGAMBANG
+   =================================================== */
+.modal-overlay {
+    display: none; /* Disembunyikan saat halaman pertama kali dimuat */
+    position: fixed; /* Mengambang di atas segalanya */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Layar belakang jadi gelap transparan */
+    z-index: 9999; /* Pastikan posisinya paling depan */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    width: 90%;
+    max-width: 400px;
+    animation: munculPopUp 0.3s ease-out; /* Animasi mulus saat muncul */
+}
+
+@keyframes munculPopUp {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content h3 {
+    color: #15A38F;
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.modal-content p {
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+/* Penataan tombol sejajar */
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Desain tombol Batal/Kembali */
+.btn-kembali-modal {
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.btn-kembali-modal:hover {
+    background-color: #ccc;
+}
+
+/* Desain tombol Lanjut */
+.btn-lanjut-modal {
+    background-color: #15A38F;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.btn-lanjut-modal:hover {
+    background-color: #0f7a6a;
+}
+

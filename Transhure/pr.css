@@ -1,0 +1,81 @@
+/* CSS KHUSUS UNTUK HALAMAN PROFIL (pr.css) */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('dsbackgroun.jpeg') no-repeat center center fixed; 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.profile-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.profile-icon {
+    font-size: 70px;
+    color: #2e6a53;
+    margin-bottom: 10px;
+}
+
+.username {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.info-box {
+    background-color: #eef2f1;
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    color: #333;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #2c4e43;
+}
+
+.status-online {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.status-offline {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.btn-kembali {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #2e6a53;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-kembali:hover {
+    background-color: #224b3c;
+}

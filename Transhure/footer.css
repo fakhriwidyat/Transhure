@@ -1,0 +1,186 @@
+/* =========================================
+   DESAIN FOOTER EXTENDED (VERTIKAL / KE BAWAH)
+   ========================================= */
+.trashure-footer-extended {
+    background-color: #f4f9f8;
+    padding: 60px 20px;
+    color: #222;
+    font-family: sans-serif;
+    border-top: 3px solid #15A38F;
+}
+
+.footer-vertical-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.footer-section:last-child {
+    margin-bottom: 0;
+}
+
+.footer-section h3 {
+    color: #15A38F;
+    margin-bottom: 22px;
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* TENTANG KAMI (NYAMAN DIBACA) */
+.about-text p {
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: justify;
+    margin-bottom: 20px;
+    color: #111111;
+    font-weight: 500; /* UBAH DI SINI: Dari 600 jadi 400 (Normal) atau 500 (Medium) */
+}
+
+/* WhatsApp Section */
+.wa-container { 
+    text-align: center; 
+    margin-top: 15px; 
+}
+
+.wa-button {
+    display: inline-flex; 
+    align-items: center; 
+    gap: 12px;
+    background-color: #25D366; 
+    color: white; 
+    padding: 16px 35px;
+    border-radius: 50px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 20px;
+    transition: 0.3s; 
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.wa-button:hover { 
+    background-color: #1ebe57; 
+    transform: scale(1.04); 
+    color: white;
+}
+
+/* =========================================
+   FORM RATING KOTAK BERSATU (ANTI-MELAYANG)
+   ========================================= */
+.rating-container { 
+    width: 100%;
+    margin-top: 10px;
+}
+
+#formRating {
+    background-color: #ffffff;
+    padding: 30px 30px 20px 30px; /* Dikurangi padding bawahnya dari 35px ke 20px */
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(21, 163, 143, 0.1); 
+    max-width: 550px;
+    margin: 0 auto;
+    border: 1px solid #e0efec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; 
+}
+
+/* Desain Bintang */
+.stars { 
+    display: flex; 
+    flex-direction: row-reverse; 
+    justify-content: center; 
+    gap: 12px; 
+}
+
+.stars input { 
+    display: none; 
+}
+
+.stars label { 
+    font-size: 40px; 
+    color: #dddddd; 
+    cursor: pointer; 
+    transition: 0.2s; 
+}
+
+.stars input:checked ~ label, 
+.stars label:hover, 
+.stars label:hover ~ label { 
+    color: #15A38F; 
+}
+
+/* Label teks keterangan di bawah bintang */
+.rating-labels { 
+    display: flex; 
+    justify-content: space-between; 
+    font-size: 12px; 
+    color: #555555; 
+    width: 100%; 
+    max-width: 480px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Kolom input teks */
+#formRating textarea { 
+    width: 100%; 
+    max-width: 480px;
+    padding: 15px; 
+    border-radius: 12px; 
+    border: 2px solid #15A38F; 
+    font-family: inherit; 
+    resize: vertical; 
+    background: #f9fdfc;
+    font-size: 14px;
+    color: #222;
+    box-sizing: border-box; /* Mencegah kolom meluber keluar kotak */
+    transition: 0.3s;
+}
+
+#formRating textarea:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(21, 163, 143, 0.3);
+    background: #ffffff;
+}
+
+/* Tombol Kirim */
+.btn-kirim-rating { 
+    background-color: #15A38F; 
+    color: white; 
+    border: none; 
+    padding: 12px 0; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    font-size: 16px; 
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(21, 163, 143, 0.2);
+    width: 100%;
+    max-width: 480px;
+    margin-top: -5px; /* Trik memakai margin minus kecil agar posisi tombol ketarik agak ke atas */
+}
+
+.btn-kirim-rating:hover { 
+    background-color: #0d7a6a; 
+    transform: translateY(-2px);
+}
+
+/* Menghilangkan celah bawah di bagian Tentang Kami/Rating */
+.trashure-footer-extended {
+    margin-bottom: 0;
+    padding-bottom: 40px; /* Sesuaikan angka ini kalau teksnya terlalu mepet ke abu-abu */
+}
+
+/* Menghilangkan celah atas di bagian Footer abu-abu */
+footer {
+    margin-top: 0;
+    border-top: none; 
+}

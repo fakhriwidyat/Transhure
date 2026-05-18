@@ -1,0 +1,112 @@
+/* ===================================================
+   1. PENGATURAN BACKGROUND Halaman (Selayar Penuh)
+   =================================================== */
+body {
+    /* Menggunakan gambar background kuis kamu */
+    background-image: url('dsbackgroun.jpeg'); /* <-- PASTIKAN NAMA FILE GAMBAR KAMU SUDAH BENAR */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    /* Pengaturan agar posisi kotak kuis tepat berada di tengah-tengah layar */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Menjaga konten tetap di tengah secara vertikal */
+}
+
+/* ===================================================
+   2. KOTAK PUTIH SOAL KUIS (Quiz Box)
+   =================================================== */
+.quiz-box {
+    background-color: rgba(255, 255, 255, 0.95); /* Putih bersih transparan sedikit agar estetik */
+    padding: 40px 30px;
+    border-radius: 20px; /* Membuat sudut kotak melengkung halus */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Efek bayangan halus di balik kotak */
+    max-width: 550px;
+    width: 90%;
+    text-align: center;
+    box-sizing: border-box; /* Crucial agar padding tidak merusak ukuran kotak */
+}
+
+/* Pengaturan teks nomor soal */
+.nomor-soal {
+    color: #15A38F; /* Warna hijau khas Trashure */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Pengaturan teks pertanyaan */
+.quiz-box h3 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #333;
+    line-height: 1.4;
+}
+
+/* ===================================================
+   3. TOMBOL OPSI JAWABAN (Stack Vertikal)
+   =================================================== */
+#opsiContainer {
+    display: flex;
+    flex-direction: column; /* Membuat opsi tersusun ke bawah (vertikal) */
+    gap: 10px; /* Jarak antar tombol opsi */
+    margin-bottom: 25px;
+}
+
+.opsi-btn {
+    display: block;
+    width: 100%;
+    background-color: #f5f5f5; /* Warna abu-abu muda standar tombol opsi */
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 15px;
+    border-radius: 8px; /* Sudut tombol melengkung sedikit */
+    text-align: left; /* Teks jawaban rata kiri */
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* Efek saat opsi disentuh mouse */
+.opsi-btn:hover {
+    background-color: #e0f2f1; /* Hijau pudar saat hover */
+    border-color: #15A38F;
+}
+
+/* Efek saat opsi DIPILIH (selected) - controlled by JS */
+.opsi-btn.selected {
+    background-color: #15A38F; /* Menjadi hijau solid */
+    color: white; /* Teks putih */
+    border-color: #15A38F;
+    font-weight: bold;
+}
+
+/* ===================================================
+   4. TOMBOL "SELANJUTNYA" (Hijau Bulat di Bawah)
+   =================================================== */
+.nav-btn {
+    background-color: #15A38F;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px; /* Bentuk tombol lonjong bulat */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s ease;
+    box-shadow: 0 4px 10px rgba(21, 163, 143, 0.2);
+}
+
+.nav-btn:hover {
+    background-color: #0d8272; /* Hijau berubah sedikit lebih gelap */
+}
